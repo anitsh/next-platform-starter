@@ -1,11 +1,17 @@
 <html>
     <head></head>
     <body>
-        <form name="feedback" data-netlify="true" hidden>
+        <form name="feedback" data-netlify-recaptcha="true" netlify-honeypot="bot-field" data-netlify="true" hidden>
+             <p class="hidden">
+               <label>
+                 Don’t fill this out if you’re human: <input name="bot-field" type="text" />
+               </label>
+            </p>
             <input type="hidden" name="form-name" value="feedback" />
             <input name="name" type="text" />
             <input name="email" type="text" />
             <input name="message" type="text" />
+            <div data-netlify-recaptcha="true"></div>
         </form>
     </body>
 </html>
